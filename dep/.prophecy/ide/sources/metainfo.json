@@ -1,0 +1,51 @@
+{
+  "name" : "github_dbt_use",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "databricks",
+  "fabricId" : "3",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "externalSources" : {
+    "type" : "Project",
+    "name" : "",
+    "children" : [ {
+      "type" : "Catalog",
+      "name" : "hive_metastore",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "main",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "samples",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "system",
+      "children" : [ ]
+    } ]
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : {
+      "https://github.com/prashantpiyush/dbt_testing" : "39"
+    }
+  },
+  "entitiesToSync" : [ {
+    "name" : "use_model",
+    "type" : "Model",
+    "syncedOnce" : false
+  } ],
+  "frontEndLanguage" : "sql"
+}
