@@ -1,0 +1,7 @@
+---
+version: 2
+macros:
+- name: "const_1"
+  description: "constant of 1"
+  arguments: []
+  macroType: "expression"

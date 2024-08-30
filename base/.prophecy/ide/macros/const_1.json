@@ -1,0 +1,31 @@
+{
+  "const_1" : {
+    "name" : "const_1",
+    "macroType" : "expression",
+    "definition" : "1",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ ]
+    },
+    "description" : "constant of 1",
+    "staleState" : "none",
+    "propertiesFile" : {
+      "name" : "macros",
+      "content" : "---\nversion: 2\nmacros:\n- name: \"const_1\"\n  description: \"constant of 1\"\n  arguments: []\n  macroType: \"expression\"\n",
+      "path" : "github_dbt_base/macros/macros.yml",
+      "projectConfiguration" : null,
+      "folderConfiguration" : {
+        "version" : 2,
+        "macros" : [ {
+          "name" : "const_1",
+          "description" : "constant of 1",
+          "arguments" : [ ],
+          "macroType" : "expression"
+        } ]
+      },
+      "packagesYml" : null,
+      "editable" : true
+    },
+    "version" : 0
+  }
+}
