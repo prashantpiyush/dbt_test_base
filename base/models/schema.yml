@@ -1,0 +1,8 @@
+---
+version: 2
+models:
+- name: "id_model"
+  columns:
+  - name: "id"
+    dataType:
+      type: "Integer"
