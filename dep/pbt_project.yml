@@ -23,7 +23,28 @@ functions:
   airflowFunctions: {}
   businessRules: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/use_model:
+    name: use_model
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - models/use_model.sql
+    - .prophecy/ide/models/use_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-08-30 10:27:49'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
