@@ -1,0 +1,13 @@
+---
+version: 2
+models:
+- name: "use_model"
+  columns:
+  - name: "id"
+    tests:
+    - unique:
+        config: {}
+        column_name: "id"
+    dataType:
+      type: "Integer"
+  tests: []
