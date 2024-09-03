@@ -38,9 +38,7 @@
   },
   "dependenciesContainer" : {
     "dependencies" : { },
-    "prophecyProjectDependencies" : {
-      "https://github.com/prashantpiyush/dbt_testing" : "39"
-    }
+    "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql"
