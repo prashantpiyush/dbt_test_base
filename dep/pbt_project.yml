@@ -24,6 +24,37 @@ functions:
   businessRules: {}
 subgraphs: {}
 sqlModels:
+  .prophecy/metadata/sqlmodels/orders:
+    name: orders
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: order_id
+        dataType:
+          type: String
+      - name: amount
+        dataType:
+          type: Integer
+      - name: payment_method
+        dataType:
+          type: String
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - models/orders.sql
+    - .prophecy/ide/models/orders.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-09-03 08:23:25'
   .prophecy/metadata/sqlmodels/use_model:
     name: use_model
     schema:
@@ -74,7 +105,30 @@ sqlMacros:
     - macros/generate_schema_name.sql
     - .prophecy/ide/macros/generate_schema_name.json
     createdAt: '2024-08-30 10:18:32'
-sqlSeeds: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_orders:
+    name: raw_orders
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: order_id
+        dataType:
+          type: String
+      - name: amount
+        dataType:
+          type: Integer
+      - name: payment_method
+        dataType:
+          type: String
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - seeds/raw_orders.csv
+    createdAt: '2024-09-03 08:23:03'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:

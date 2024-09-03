@@ -12,9 +12,29 @@ models:
         config: {}
         column_name: "\"id\""
         threshold: 5000
+    - relationships:
+        config: {}
+        column_name: "id"
+        to: "raw_ints"
+        field: "int"
     dataType:
       type: "Integer"
   tests:
   - not_null:
       config: {}
       column_name: "id"
+- name: "orders"
+  columns: []
+  tests:
+  - not_null:
+      config: {}
+      column_name: "id"
+  - accepted_values:
+      config:
+        severity: "warn"
+        where: "\"id != 1\""
+      column_name: "payment_method"
+      values:
+      - "debit_card"
+      - "cc_card"
+      - "wire"
