@@ -1,6 +1,6 @@
 name: github_dbt_base
 description: ''
-version: 0.0.3
+version: 0.0.4
 author: prashantpiyush@prophecy.io
 language: sql
 buildSystem: ''
