@@ -56,6 +56,14 @@ sqlTests:
     - tests/generic/custom_unique.sql
     testType: GenericDataTest
     createdAt: '2024-08-30 10:20:40'
+  .prophecy/metadata/sqltests/min_value_test:
+    name: min_value_test
+    description: assert all values to be greater than threshold
+    author: prashantpiyush@prophecy.io
+    files:
+    - tests/generic/min_value_test.sql
+    testType: GenericDataTest
+    createdAt: '2024-09-03 07:29:45'
 sqlMacros:
   .prophecy/metadata/sqlmacros/const_1:
     name: const_1
