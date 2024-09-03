@@ -1,0 +1,21 @@
+---
+version: 2
+models:
+- name: "use_model"
+  columns:
+  - name: "id"
+    tests:
+    - unique:
+        config: {}
+        column_name: "id"
+    dataType:
+      type: "Integer"
+  - name: "not_a_col"
+    tests:
+    - not_null:
+        config: {}
+        column_name: "not_a_col"
+    dataType:
+      type: "String"
+  tests: []
+sources: []

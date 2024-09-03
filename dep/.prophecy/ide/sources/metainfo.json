@@ -45,7 +45,7 @@
   "entitiesToSync" : [ {
     "name" : "use_model",
     "type" : "Model",
-    "syncedOnce" : false
+    "syncedOnce" : true
   } ],
   "frontEndLanguage" : "sql"
 }
