@@ -47,7 +47,23 @@ sqlModels:
       snapshots: []
     createdAt: '2024-08-30 10:27:49'
 sqlSnapshots: {}
-sqlTests: {}
+sqlTests:
+  .prophecy/metadata/sqltests/max_value_test:
+    name: max_value_test
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - tests/generic/max_value_test.sql
+    testType: GenericDataTest
+    createdAt: '2024-09-03 08:05:10'
+  .prophecy/metadata/sqltests/unique:
+    name: unique
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - tests/generic/unique.sql
+    testType: GenericDataTest
+    createdAt: '2024-09-03 08:11:48'
 sqlMacros:
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name

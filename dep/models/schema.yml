@@ -8,6 +8,13 @@ models:
     - unique:
         config: {}
         column_name: "id"
+    - max_value_test:
+        config: {}
+        column_name: "\"id\""
+        threshold: 5000
     dataType:
       type: "Integer"
-  tests: []
+  tests:
+  - not_null:
+      config: {}
+      column_name: "id"
