@@ -38,6 +38,7 @@ sqlModels:
     files:
     - models/use_model.sql
     - .prophecy/ide/models/use_model.json
+    - models/schema.yml
     sqlDependencies:
       models: []
       datasets: []

@@ -40,10 +40,6 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
-  "entitiesToSync" : [ {
-    "name" : "use_model",
-    "type" : "Model",
-    "syncedOnce" : false
-  } ],
+  "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql"
 }
