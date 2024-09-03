@@ -1,0 +1,37 @@
+{
+  "min_value_test" : {
+    "name" : "min_value_test",
+    "definition" : "\nselect * from {{model}} where column_name < {{threshold}}\n",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "table"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "column_name",
+        "kind" : {
+          "type" : "column"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "threshold",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none",
+    "description" : "assert all values to be greater than threshold",
+    "version" : 0
+  }
+}
