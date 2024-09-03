@@ -42,10 +42,6 @@
       "https://github.com/prashantpiyush/dbt_testing" : "39"
     }
   },
-  "entitiesToSync" : [ {
-    "name" : "use_model",
-    "type" : "Model",
-    "syncedOnce" : true
-  } ],
+  "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql"
 }

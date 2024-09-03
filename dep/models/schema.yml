@@ -10,11 +10,4 @@ models:
         column_name: "id"
     dataType:
       type: "Integer"
-  - name: "not_a_col"
-    tests:
-    - not_null:
-        config: {}
-        column_name: "not_a_col"
-    dataType:
-      type: "String"
   tests: []
