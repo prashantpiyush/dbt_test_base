@@ -50,7 +50,7 @@ sqlSnapshots: {}
 sqlTests:
   .prophecy/metadata/sqltests/custom_unique:
     name: custom_unique
-    description: custom unique check
+    description: null
     author: prashantpiyush@prophecy.io
     files:
     - tests/generic/custom_unique.sql
