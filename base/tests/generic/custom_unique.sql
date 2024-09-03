@@ -1,6 +1,6 @@
 {% test custom_unique(model, column_name) %}
 
-WITH duplicates AS (
+WITH dup AS (
     SELECT
         {{ column_name }},
         COUNT(*) AS count
@@ -9,7 +9,7 @@ WITH duplicates AS (
     HAVING COUNT(*) > 1
 )
 
-SELECT * FROM duplicates
+SELECT * FROM dup
 
 {% endtest %}
 
