@@ -1,48 +1,41 @@
 ---
 version: 2
 models:
+- name: "orders"
+  columns:
+  - name: "id"
+    dataType:
+      type: "Integer"
+  - name: "order_id"
+    dataType:
+      type: "String"
+  - name: "amount"
+    dataType:
+      type: "Integer"
+  - name: "payment_method"
+    dataType:
+      type: "String"
 - name: "use_model"
   columns:
   - name: "id"
     tests:
     - unique:
-        column_name: "id"
-    - not_null:
-        column_name: "id"
-    - custom_unique:
-        column_name: "id"
         config:
-          severity: "error"
-          limit: 10
           store_failures: true
+          fail_calc: "count(*)"
+          severity: "warn"
+          where: "id < 2000"
+          limit: 10
     - relationships:
+        config:
+          where: "id != 1"
+        to: "ref('raw_ints')"
         field: "int"
-        column_name: "id"
-        to: "raw_ints"
+    - github_dbt_base.min_value_test:
+        config: {}
+        threshold: "\"-1\""
+    - max_value_test:
+        config: {}
+        threshold: "\"10000\""
     dataType:
       type: "Integer"
-  tests: []
-- name: "orders"
-  columns: []
-  tests:
-  - not_null:
-      column_name: "id"
-      config:
-        severity: "warn"
-  - accepted_values:
-      values:
-      - "debit_card"
-      - "cc_card"
-      - "wire"
-      column_name: "payment_method"
-      config:
-        store_failures: true
-        warn_if: " != 0"
-        error_if: " != 0"
-        severity: "warn"
-        where: "id > 2"
-        limit: 10
-  - min_value_test:
-      config: {}
-      column_name: "id"
-      threshold: "-1"
