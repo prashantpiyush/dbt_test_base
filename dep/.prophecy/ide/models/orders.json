@@ -5,56 +5,7 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ {
-        "source" : {
-          "table" : {
-            "name" : "use_model",
-            "sourceType" : "Model"
-          }
-        },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "use_model",
-        "canJoinWith" : [ {
-          "processLabel" : "raw_orders",
-          "processId" : "kq0vguMPis-53xVsaUm7Q",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "id" ],
-            "conditions" : [ {
-              "alias" : "use_model",
-              "expression" : {
-                "expression" : "use_model.id = raw_orders.id"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "raw_orders.id"
-              },
-              "alias" : "id"
-            }, {
-              "expression" : {
-                "expression" : "raw_orders.order_id"
-              },
-              "alias" : "order_id"
-            }, {
-              "expression" : {
-                "expression" : "raw_orders.amount"
-              },
-              "alias" : "amount"
-            }, {
-              "expression" : {
-                "expression" : "raw_orders.payment_method"
-              },
-              "alias" : "payment_method"
-            } ],
-            "headAlias" : "use_model",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "id" ],
-          "isRecommended" : true
-        } ]
-      } ]
+      "sources" : [ ]
     },
     "version" : 3
   },

@@ -4,6 +4,13 @@ models:
 - name: "orders"
   columns:
   - name: "id"
+    tests:
+    - unique:
+        config: {}
+    - relationships:
+        config: {}
+        to: "ref('raw_ids')"
+        field: "id"
     dataType:
       type: "Integer"
   - name: "order_id"
@@ -13,6 +20,14 @@ models:
     dataType:
       type: "Integer"
   - name: "payment_method"
+    tests:
+    - accepted_values:
+        config: {}
+        values:
+        - "upi"
+        - "wire"
+        - "debit_card"
+        - "cc_card"
     dataType:
       type: "String"
 - name: "use_model"
@@ -22,20 +37,24 @@ models:
     - unique:
         config:
           store_failures: true
-          fail_calc: "count(*)"
+          fail_calc: "count(1)"
           severity: "warn"
-          where: "id < 2000"
-          limit: 10
+          where: "id < 1000"
+          limit: 1000
+    - not_null:
+        config: {}
     - relationships:
         config:
-          where: "id != 1"
+          where: "id BETWEEN 0 AND 200"
         to: "ref('raw_ints')"
         field: "int"
     - github_dbt_base.min_value_test:
         config: {}
-        threshold: "\"-1\""
-    - max_value_test:
+        threshold: "-1"
+    - max_value_test_with_extra_col:
         config: {}
-        threshold: "\"10000\""
+        ig_col: "use_model.id"
+        threshold: "1000"
+        column_name: "id"
     dataType:
       type: "Integer"

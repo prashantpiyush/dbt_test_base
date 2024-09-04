@@ -1,0 +1,14 @@
+---
+version: 2
+sources:
+- name: "hive_metastore.pp_test"
+  database: "hive_metastore"
+  schema: "pp_test"
+  config:
+    enabled: true
+  tables:
+  - name: "raw_ids"
+    columns:
+    - name: "id"
+      dataType:
+        type: "Bigint"

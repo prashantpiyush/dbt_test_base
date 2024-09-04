@@ -129,7 +129,26 @@ sqlSeeds:
     files:
     - seeds/raw_orders.csv
     createdAt: '2024-09-03 08:23:03'
-sqlSources: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/hive_metastore_pp_test:
+    name: hive_metastore.pp_test
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-09-04 21:33:59'
+    tables:
+    - name: raw_ids
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: id
+          dataType:
+            type: Bigint
+      description: null
+      author: prashantpiyush@prophecy.io
+      createdAt: '2024-09-04 21:33:59'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
