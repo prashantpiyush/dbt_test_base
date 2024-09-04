@@ -1,7 +1,7 @@
 {
   "min_value_test" : {
     "name" : "min_value_test",
-    "definition" : "\nselect * from {{model}} where column_name < {{threshold}}\n",
+    "definition" : "\n\nselect * from {{ model }} where {{ column_name }}  < {{ threshold }}",
     "parameters" : {
       "type" : "record",
       "fields" : [ {
@@ -31,7 +31,6 @@
       } ]
     },
     "staleState" : "none",
-    "description" : "assert all values to be greater than threshold",
     "version" : 0
   }
 }
