@@ -42,3 +42,7 @@ models:
         severity: "warn"
         where: "id > 2"
         limit: 10
+  - min_value_test:
+      config: {}
+      column_name: "id"
+      threshold: "-1"
