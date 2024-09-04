@@ -1,7 +1,7 @@
 {
   "min_value_test" : {
     "name" : "min_value_test",
-    "definition" : "\n\nselect * from {{ model }} where column_name < {{ threshold }}",
+    "definition" : "\n\nselect * from {{ model }} where {{ column_name }}  < {{ threshold }}",
     "parameters" : {
       "type" : "record",
       "fields" : [ {
