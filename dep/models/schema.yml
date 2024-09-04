@@ -6,35 +6,39 @@ models:
   - name: "id"
     tests:
     - unique:
-        config: {}
         column_name: "id"
-    - max_value_test:
-        config: {}
-        column_name: "\"id\""
-        threshold: 5000
+    - not_null:
+        column_name: "id"
+    - custom_unique:
+        column_name: "id"
+        config:
+          severity: "error"
+          limit: 10
+          store_failures: true
     - relationships:
-        config: {}
+        field: "int"
         column_name: "id"
         to: "raw_ints"
-        field: "int"
     dataType:
       type: "Integer"
-  tests:
-  - not_null:
-      config: {}
-      column_name: "id"
+  tests: []
 - name: "orders"
   columns: []
   tests:
   - not_null:
-      config: {}
       column_name: "id"
-  - accepted_values:
       config:
         severity: "warn"
-        where: "\"id != 1\""
-      column_name: "payment_method"
+  - accepted_values:
       values:
       - "debit_card"
       - "cc_card"
       - "wire"
+      column_name: "payment_method"
+      config:
+        store_failures: true
+        warn_if: " != 0"
+        error_if: " != 0"
+        severity: "warn"
+        where: "id > 2"
+        limit: 10
