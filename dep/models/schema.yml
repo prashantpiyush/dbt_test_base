@@ -22,12 +22,14 @@ models:
   - name: "payment_method"
     tests:
     - accepted_values:
-        config: {}
+        config:
+          where: "payment_method LIKE '%'"
         values:
         - "upi"
         - "wire"
         - "debit_card"
         - "cc_card"
+        column_name: "payment_method"
     dataType:
       type: "String"
 - name: "use_model"
@@ -58,3 +60,13 @@ models:
         column_name: "id"
     dataType:
       type: "Integer"
+- name: "dep_source_use"
+  columns:
+  - name: "id"
+    tests:
+    - relationships:
+        config: {}
+        to: source('hive_metastore.pp_test', 'dep_ids')
+        field: "id"
+    dataType:
+      type: "Bigint"

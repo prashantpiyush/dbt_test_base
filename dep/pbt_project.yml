@@ -24,6 +24,28 @@ functions:
   businessRules: {}
 subgraphs: {}
 sqlModels:
+  .prophecy/metadata/sqlmodels/dep_source_use:
+    name: dep_source_use
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Bigint
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - models/dep_source_use.sql
+    - .prophecy/ide/models/dep_source_use.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-09-05 18:33:46'
   .prophecy/metadata/sqlmodels/orders:
     name: orders
     schema:
@@ -86,7 +108,7 @@ sqlTests:
     files:
     - tests/generic/max_value_test.sql
     testType: GenericDataTest
-    createdAt: '2024-09-03 08:05:10'
+    createdAt: '2024-09-05 17:42:03'
   .prophecy/metadata/sqltests/max_value_test_with_extra_col:
     name: max_value_test_with_extra_col
     description: null
@@ -94,7 +116,7 @@ sqlTests:
     files:
     - tests/generic/max_value_test.sql
     testType: GenericDataTest
-    createdAt: '2024-09-04 17:49:16'
+    createdAt: '2024-09-05 17:42:03'
 sqlMacros:
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
