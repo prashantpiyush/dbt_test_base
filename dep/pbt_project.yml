@@ -24,28 +24,6 @@ functions:
   businessRules: {}
 subgraphs: {}
 sqlModels:
-  .prophecy/metadata/sqlmodels/dep_source_use:
-    name: dep_source_use
-    schema:
-      entityType: ''
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Bigint
-    description: null
-    author: prashantpiyush@prophecy.io
-    files:
-    - models/dep_source_use.sql
-    - .prophecy/ide/models/dep_source_use.json
-    - models/schema.yml
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-09-05 18:33:46'
   .prophecy/metadata/sqlmodels/orders:
     name: orders
     schema:
@@ -77,46 +55,8 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-09-03 08:23:25'
-  .prophecy/metadata/sqlmodels/use_model:
-    name: use_model
-    schema:
-      entityType: ''
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-    description: null
-    author: prashantpiyush@prophecy.io
-    files:
-    - models/use_model.sql
-    - .prophecy/ide/models/use_model.json
-    - models/schema.yml
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-08-30 10:27:49'
 sqlSnapshots: {}
-sqlTests:
-  .prophecy/metadata/sqltests/max_value_test:
-    name: max_value_test
-    description: null
-    author: prashantpiyush@prophecy.io
-    files:
-    - tests/generic/max_value_test.sql
-    testType: GenericDataTest
-    createdAt: '2024-09-05 17:42:03'
-  .prophecy/metadata/sqltests/max_value_test_with_extra_col:
-    name: max_value_test_with_extra_col
-    description: null
-    author: prashantpiyush@prophecy.io
-    files:
-    - tests/generic/max_value_test.sql
-    testType: GenericDataTest
-    createdAt: '2024-09-05 17:42:03'
+sqlTests: {}
 sqlMacros:
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
@@ -158,7 +98,7 @@ sqlSources:
     author: prashantpiyush@prophecy.io
     files:
     - prophecy-sources/sources.yml
-    createdAt: '2024-09-04 21:33:59'
+    createdAt: '2024-09-18 06:17:17'
     tables:
     - name: raw_ids
       schema:
@@ -170,7 +110,7 @@ sqlSources:
             type: Bigint
       description: null
       author: prashantpiyush@prophecy.io
-      createdAt: '2024-09-04 21:33:59'
+      createdAt: '2024-09-18 06:17:17'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
