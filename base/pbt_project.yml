@@ -65,16 +65,6 @@ sqlTests:
     testType: GenericDataTest
     createdAt: '2024-09-03 07:29:45'
 sqlMacros:
-  .prophecy/metadata/sqlmacros/const_1:
-    name: const_1
-    macroType: expression
-    description: constant of 1
-    author: prashantpiyush@prophecy.io
-    files:
-    - macros/const_1.sql
-    - .prophecy/ide/macros/const_1.json
-    - macros/macros.yml
-    createdAt: '2024-08-30 10:25:37'
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
     macroType: expression
