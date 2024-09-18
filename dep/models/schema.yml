@@ -9,8 +9,16 @@ models:
         config: {}
     - relationships:
         config: {}
-        to: "ref('raw_ids')"
+        to: "source(\"hive_metastore.pp_test\", \"raw_ids\")"
         field: "id"
+        column_name: "id"
+    - max_value_test:
+        config:
+          store_failures: true
+          limit: 76
+          where: "id < 50"
+          severity: "warn"
+        threshold: "5000"
     dataType:
       type: "Integer"
   - name: "order_id"
