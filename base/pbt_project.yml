@@ -110,7 +110,7 @@ sqlSources:
     author: prashantpiyush@prophecy.io
     files:
     - prophecy-sources/sources.yml
-    createdAt: '2024-08-30 10:25:13'
+    createdAt: '2024-09-18 06:13:31'
     tables:
     - name: dep_ids
       schema:
@@ -122,7 +122,7 @@ sqlSources:
             type: Bigint
       description: null
       author: prashantpiyush@prophecy.io
-      createdAt: '2024-08-30 10:25:13'
+      createdAt: '2024-09-18 06:13:31'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
