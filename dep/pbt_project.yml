@@ -59,7 +59,7 @@ sqlSnapshots: {}
 sqlTests:
   .prophecy/metadata/sqltests/max_value_test:
     name: max_value_test
-    description: Check no value is above threshold
+    description: null
     author: prashantpiyush@prophecy.io
     files:
     - tests/generic/max_value_test.sql
@@ -99,26 +99,7 @@ sqlSeeds:
     files:
     - seeds/raw_orders.csv
     createdAt: '2024-09-03 08:23:03'
-sqlSources:
-  .prophecy/metadata/sqlsources/hive_metastore_pp_test:
-    name: hive_metastore.pp_test
-    description: null
-    author: prashantpiyush@prophecy.io
-    files:
-    - prophecy-sources/sources.yml
-    createdAt: '2024-09-18 06:17:17'
-    tables:
-    - name: raw_ids
-      schema:
-        entityType: ''
-        providerType: databricks
-        fields:
-        - name: id
-          dataType:
-            type: Bigint
-      description: null
-      author: prashantpiyush@prophecy.io
-      createdAt: '2024-09-18 06:17:17'
+sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
