@@ -6,3 +6,8 @@ models:
   - name: "id"
     dataType:
       type: "Integer"
+- name: "id_snapshot_1"
+  columns:
+  - name: "int"
+    dataType:
+      type: "Integer"
