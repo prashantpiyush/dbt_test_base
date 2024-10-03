@@ -1,5 +1,6 @@
 {{
   config({    
+    "materialized": "table",
     "schema": "pp_test"
   })
 }}
