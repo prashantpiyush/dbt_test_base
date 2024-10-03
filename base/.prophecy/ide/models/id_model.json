@@ -9,6 +9,7 @@
     },
     "graphConfig" : {
       "entityConfig" : {
+        "materialized" : "table",
         "schema" : "\"pp_test\"",
         "type" : "ModelConfig"
       },
