@@ -1,5 +1,5 @@
 ---
 packages:
-- revision: "github_dbt_base/0.0.9"
+- revision: "github_dbt_base/0.0.10"
   git: "https://github.com/prashantpiyush/dbt_testing"
   subdirectory: "base"
