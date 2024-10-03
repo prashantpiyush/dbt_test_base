@@ -79,13 +79,14 @@
         "x" : 220,
         "y" : 20,
         "phase" : 0,
+        "macroDependencies" : [ ],
         "isLabelGrayed" : false
       },
       "properties" : {
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT *\n\nFROM raw_orders\n",
+        "query" : "SELECT * \n\nFROM raw_orders\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -152,8 +153,7 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      },
-      "index" : 1
+      }
     }
   },
   "connections" : [ {
