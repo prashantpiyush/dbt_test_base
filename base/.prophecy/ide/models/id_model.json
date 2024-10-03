@@ -2,7 +2,7 @@
   "id" : "id_model",
   "metainfo" : {
     "label" : "id_model",
-    "autoLayout" : true,
+    "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
       "sources" : [ ]
@@ -24,6 +24,8 @@
       "component" : "Seed",
       "metadata" : {
         "label" : "raw_ids",
+        "x" : 20,
+        "y" : 20,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -59,6 +61,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "id_model",
+        "x" : 220,
+        "y" : 20,
         "phase" : 0,
         "isLabelGrayed" : false
       },
