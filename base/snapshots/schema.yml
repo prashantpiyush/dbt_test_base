@@ -1,3 +1,8 @@
 ---
 version: 2
-snapshots: []
+snapshots:
+- name: "id_snapshot_1"
+  columns:
+    - name: "int"
+      dataType:
+        type: "Integer"
