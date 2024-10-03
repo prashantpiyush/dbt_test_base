@@ -46,28 +46,6 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-08-30 10:19:59'
-  .prophecy/metadata/sqlmodels/id_snapshot_1:
-    name: id_snapshot_1
-    schema:
-      entityType: ''
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-    description: null
-    author: prashantpiyush@prophecy.io
-    files:
-    - models/id_snapshot_1.sql
-    - .prophecy/ide/models/id_snapshot_1.json
-    - models/schema.yml
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-10-03 07:22:27'
 sqlSnapshots: {}
 sqlTests:
   .prophecy/metadata/sqltests/custom_unique:
