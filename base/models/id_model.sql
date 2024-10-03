@@ -1,4 +1,8 @@
-
+{{
+  config({    
+    "schema": "pp_test"
+  })
+}}
 
 WITH raw_ids AS (
 

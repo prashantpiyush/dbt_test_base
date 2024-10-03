@@ -1,6 +1,6 @@
 name: github_dbt_base
 description: ''
-version: 0.0.5
+version: 0.0.9
 author: prashantpiyush@prophecy.io
 language: sql
 buildSystem: ''
@@ -46,6 +46,28 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-08-30 10:19:59'
+  .prophecy/metadata/sqlmodels/id_snapshot_1:
+    name: id_snapshot_1
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+    description: null
+    author: prashantpiyush@prophecy.io
+    files:
+    - models/id_snapshot_1.sql
+    - .prophecy/ide/models/id_snapshot_1.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-10-03 07:22:27'
 sqlSnapshots: {}
 sqlTests:
   .prophecy/metadata/sqltests/custom_unique:
@@ -65,16 +87,6 @@ sqlTests:
     testType: GenericDataTest
     createdAt: '2024-09-03 07:29:45'
 sqlMacros:
-  .prophecy/metadata/sqlmacros/const_1:
-    name: const_1
-    macroType: expression
-    description: constant of 1
-    author: prashantpiyush@prophecy.io
-    files:
-    - macros/const_1.sql
-    - .prophecy/ide/macros/const_1.json
-    - macros/macros.yml
-    createdAt: '2024-08-30 10:25:37'
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
     macroType: expression
@@ -120,7 +132,7 @@ sqlSources:
     author: prashantpiyush@prophecy.io
     files:
     - prophecy-sources/sources.yml
-    createdAt: '2024-08-30 10:25:13'
+    createdAt: '2024-09-18 06:13:31'
     tables:
     - name: dep_ids
       schema:
@@ -132,7 +144,7 @@ sqlSources:
             type: Bigint
       description: null
       author: prashantpiyush@prophecy.io
-      createdAt: '2024-08-30 10:25:13'
+      createdAt: '2024-09-18 06:13:31'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline

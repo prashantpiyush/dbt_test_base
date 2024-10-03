@@ -5,81 +5,72 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ {
-        "source" : {
-          "table" : {
-            "name" : "raw_orders",
-            "sourceName" : "hive_metastore.pp_test",
-            "sourceType" : "ExternalSource"
-          }
-        },
-        "sourceComponentKind" : "ExternalSource",
-        "sourceLabel" : "raw_orders",
-        "canJoinWith" : [ {
-          "processLabel" : "dep_ids",
-          "processId" : "9df0A427mfg67PyNB6kk0",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "id" ],
-            "conditions" : [ {
-              "alias" : "raw_orders",
-              "expression" : {
-                "expression" : "raw_orders.id = dep_ids.id"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "raw_orders.order_id"
-              },
-              "alias" : "order_id"
-            }, {
-              "expression" : {
-                "expression" : "raw_orders.amount"
-              },
-              "alias" : "amount"
-            }, {
-              "expression" : {
-                "expression" : "raw_orders.payment_method"
-              },
-              "alias" : "payment_method"
-            }, {
-              "expression" : {
-                "expression" : "dep_ids.id"
-              },
-              "alias" : "id"
-            } ],
-            "headAlias" : "raw_orders",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "id" ],
-          "isRecommended" : true
-        } ]
-      } ]
+      "sources" : [ ]
     },
     "graphConfig" : {
       "entityConfig" : {
+        "schema" : "\"pp_test\"",
         "type" : "ModelConfig"
+      },
+      "userDefinedConfig" : {
+        "vars" : { }
       }
     },
     "version" : 3
   },
   "processes" : {
-    "id_model##LvSb8Txq" : {
-      "id" : "id_model##LvSb8Txq",
-      "component" : "TargetModel",
+    "raw_ids##j5vpuP3S" : {
+      "id" : "raw_ids##j5vpuP3S",
+      "component" : "Seed",
       "metadata" : {
-        "label" : "id_model",
+        "label" : "raw_ids",
         "x" : 20,
         "y" : 20,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "table" : {
+          "name" : "raw_ids",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "HqiHAETn",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "index" : 0
+    },
+    "final##OpBxuL29" : {
+      "id" : "final##OpBxuL29",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "id_model",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "isLabelGrayed" : false
       },
       "properties" : {
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM raw_ids\n",
+        "query" : "SELECT *\n\nFROM raw_ids\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -87,7 +78,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "lw7ZMFtR",
+          "id" : "jTIJ6tkC",
           "schema" : {
             "entityType" : "",
             "providerType" : "Databricks",
@@ -101,7 +92,7 @@
           "slug" : "raw_ids"
         } ],
         "outputs" : [ {
-          "id" : "zoTWULRJ",
+          "id" : "gKsB33xM",
           "schema" : {
             "entityType" : "",
             "providerType" : "Databricks",
@@ -116,52 +107,16 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      }
-    },
-    "-keh_UWCg2GEjl3t2WgYk" : {
-      "id" : "-keh_UWCg2GEjl3t2WgYk",
-      "component" : "Seed",
-      "metadata" : {
-        "label" : "raw_ids",
-        "slug" : "raw_ids",
-        "x" : -140,
-        "y" : 40,
-        "phase" : 0
       },
-      "properties" : {
-        "table" : {
-          "name" : "raw_ids",
-          "sourceType" : "Seed",
-          "alias" : ""
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "sqeNHjjCxxpy5zbxg0Ryk",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
+      "index" : 1
     }
   },
   "connections" : [ {
-    "id" : "So6KIqkFwCz6uAQ1weQA7$$NrIlckp6C2zEdnB7IUuxR",
-    "source" : "-keh_UWCg2GEjl3t2WgYk",
-    "sourcePort" : "sqeNHjjCxxpy5zbxg0Ryk",
-    "target" : "id_model##LvSb8Txq",
-    "targetPort" : "lw7ZMFtR"
+    "id" : "N6xgSA6O",
+    "source" : "raw_ids##j5vpuP3S",
+    "sourcePort" : "HqiHAETn",
+    "target" : "final##OpBxuL29",
+    "targetPort" : "jTIJ6tkC"
   } ],
   "component" : "Model"
 }
