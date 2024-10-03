@@ -116,7 +116,10 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields: []
+        fields:
+        - name: id
+          dataType:
+            type: Bigint
       description: null
       author: prashantpiyush@prophecy.io
       createdAt: '2024-09-18 06:13:31'
