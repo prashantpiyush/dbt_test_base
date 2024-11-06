@@ -3,40 +3,34 @@ version: 2
 models:
 - name: "orders"
   columns:
-  - name: "id"
-    tests:
-    - unique:
-        config: {}
-    - relationships:
-        config: {}
-        to: "source(\"hive_metastore.pp_test\", \"raw_ids\")"
-        field: "id"
-        column_name: "id"
-    - max_value_test:
-        config:
-          store_failures: true
-          limit: 76
-          where: "id < 50"
-          severity: "warn"
-        threshold: "5000"
+  - name: "USER_ID"
     dataType:
       type: "Integer"
-  - name: "order_id"
-    dataType:
-      type: "String"
   - name: "amount"
     dataType:
       type: "Integer"
   - name: "payment_method"
+    dataType:
+      type: "String"
+  - name: "ID"
+    tests:
+    - unique:
+        config:
+          fail_calc: "count(*)"
+        column_name: "ID"
+    dataType:
+      type: "Integer"
+  - name: "order_date"
+    dataType:
+      type: "Date"
+  - name: "status"
     tests:
     - accepted_values:
-        config:
-          where: "payment_method LIKE '%'"
         values:
-        - "upi"
-        - "wire"
-        - "debit_card"
-        - "cc_card"
-        column_name: "payment_method"
+        - "placed"
+        - "shipped"
+        - "completed"
+        - "returned"
+        - "return_pending"
     dataType:
       type: "String"
