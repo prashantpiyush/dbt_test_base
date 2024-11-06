@@ -16,7 +16,12 @@ models:
     tests:
     - unique:
         config:
+          store_failures: true
           fail_calc: "count(*)"
+          where: "ID != 1"
+          error_if: " BETWEEN 1 AND 10000"
+          severity: "warn"
+          limit: 10
         column_name: "ID"
     dataType:
       type: "Integer"
